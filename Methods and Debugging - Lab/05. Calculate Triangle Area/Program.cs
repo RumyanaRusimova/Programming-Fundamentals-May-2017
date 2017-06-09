@@ -9,9 +9,7 @@
             double width = double.Parse(Console.ReadLine());
             double heigth = double.Parse(Console.ReadLine());
 
-            double triangleArea = width * heigth / 2;
-
-            Console.WriteLine(triangleArea);
+            Console.WriteLine(GetTriangleArea(width, heigth));
 
         }
 
