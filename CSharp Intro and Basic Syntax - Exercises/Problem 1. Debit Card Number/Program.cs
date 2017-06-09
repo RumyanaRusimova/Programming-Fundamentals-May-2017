@@ -1,42 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace _01.Debit_Card_Number
+﻿namespace _01.Debit_Card_Number
 {
+    using System;
+
     public class Program
     {
         public static void Main()
         {
-            var firstNumberAsString = Console.ReadLine();
-            var secondNumberAsString = Console.ReadLine();
-            var thirdNumberAsString = Console.ReadLine();
-            var fourthNumberAsString = Console.ReadLine();
+            var firstNumber = int.Parse(Console.ReadLine());
+            var secondNumber = int.Parse(Console.ReadLine());
+            var thirdNumber = int.Parse(Console.ReadLine());
+            var fourthNumber = int.Parse(Console.ReadLine());
 
-            var list = new List<string>();
-            list.Add(firstNumberAsString);
-            list.Add(secondNumberAsString);
-            list.Add(thirdNumberAsString);
-            list.Add(fourthNumberAsString);
-
-            for (int i = 0; i < 4; i++)
-            {
-                if (list[i].Length == 3)
-                {
-                    list[i] = "0" + list[i];
-                }
-
-                else if (list[i].Length == 2)
-                {
-                    list[i] = "00" + list[i];
-                }
-
-                else if (list[i].Length == 1)
-                {
-                    list[i] = "000" + list[i];
-                }
-            }
-
-            Console.WriteLine(string.Join(" ", list));
+            Console.WriteLine("{0:#0000} {1:#0000} {2:#0000} {3:#0000}",
+                firstNumber, secondNumber, thirdNumber, fourthNumber);
         }
     }
 }
