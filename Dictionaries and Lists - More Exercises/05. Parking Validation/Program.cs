@@ -1,4 +1,4 @@
-﻿namespace _05.Parking_Validation
+namespace _05.Parking_Validation
 {
     using System;
     using System.Collections.Generic;
@@ -70,6 +70,7 @@
         {
             if (licensePlateNumber.Length == 8
                 && licensePlateNumber.Take(2).All(char.IsUpper)
+                && licensePlateNumber.Skip(2).Take(4).All(char.IsDigit)
                 && licensePlateNumber.Skip(6).Take(2).All(char.IsUpper))
             {
                 return true;
