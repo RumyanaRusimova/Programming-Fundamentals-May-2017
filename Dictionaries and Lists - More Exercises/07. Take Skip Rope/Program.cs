@@ -1,4 +1,4 @@
-﻿namespace _07.Take_Or_Skip_Rope
+namespace _07.Take_Or_Skip_Rope
 {
     using System;
     using System.Collections.Generic;
@@ -25,10 +25,10 @@
 
             for (int i = 0; i < skipList.Count; i++)
             {
-                result.Append(textWithoutDigits.Skip(skipTotal).Take(takeList[i]));
+                result.Append(string.Concat(textWithoutDigits.Skip(skipTotal).Take(takeList[i])));
                 skipTotal += takeList[i] + skipList[i];
             }
-            //string.Concat(
+
             Console.WriteLine(result.ToString());
         }
 
